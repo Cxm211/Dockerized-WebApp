@@ -1,0 +1,14 @@
+version: '3'
+services:
+  python:
+    build:
+      context: .
+      dockerfile: docker/Python/Dockerfile
+    volumes:
+      - ./MyApp:/app
+    ports:
+      - 8000:8000
+
+      #docker-compose exec python bash
+      #cd /app && pip install pipenv && pipenv install --python 3.6 && c && pipenv run pip freeze > requirements.txt && pip install -r requirements.txt && python manage.py runserver 0.0.0.0:8000 \
+
